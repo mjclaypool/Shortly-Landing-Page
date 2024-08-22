@@ -11,28 +11,28 @@ export default function Footer() {
       <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 lg:pl-8">
         <div className="flex flex-col items-center lg:items-start gap-2">
           <h3 className="font-semibold text-white mb-3">Features</h3>
-          <button type="button" className="lg:text-left">Link Shortening</button>
-          <button type="button" className="lg:text-left">Branded Links</button>
-          <button type="button">Analytics</button>
+          <button type="button" className="lg:text-left hover:text-primary-cyan">Link Shortening</button>
+          <button type="button" className="lg:text-left hover:text-primary-cyan">Branded Links</button>
+          <button type="button" className="hover:text-primary-cyan">Analytics</button>
         </div>
         <div className="flex flex-col items-center lg:items-start gap-2">
           <h3 className="font-semibold text-white mb-3">Resources</h3>
-          <button type="button">Blog</button>
-          <button type="button">Developers</button>
-          <button type="button">Support</button>
+          <button type="button" className="hover:text-primary-cyan">Blog</button>
+          <button type="button" className="hover:text-primary-cyan">Developers</button>
+          <button type="button" className="hover:text-primary-cyan">Support</button>
         </div>
         <div className="flex flex-col items-center lg:items-start gap-2">
           <h3 className="font-semibold text-white mb-3">Company</h3>
-          <button type="button">About</button>
-          <button type="button">Our Team</button>
-          <button type="button">Careers</button>
-          <button type="button">Contact</button>
+          <button type="button" className="hover:text-primary-cyan">About</button>
+          <button type="button" className="hover:text-primary-cyan">Our Team</button>
+          <button type="button" className="hover:text-primary-cyan">Careers</button>
+          <button type="button" className="hover:text-primary-cyan">Contact</button>
         </div>
         <div className="flex justify-center items-center gap-6">
-          <img src={facebook} alt="Shortly logo" className="object-contain" />
-          <img src={twitter} alt="Shortly logo" className="object-contain" />
-          <img src={pinterest} alt="Shortly logo" className="object-contain" />
-          <img src={instagram} alt="Shortly logo" className="object-contain" />
+          <img src={facebook} alt="Shortly logo" className="object-contain cursor-pointer" />
+          <img src={twitter} alt="Shortly logo" className="object-contain cursor-pointer" />
+          <img src={pinterest} alt="Shortly logo" className="object-contain cursor-pointer" />
+          <img src={instagram} alt="Shortly logo" className="object-contain cursor-pointer" />
         </div>
       </div>
     </footer>

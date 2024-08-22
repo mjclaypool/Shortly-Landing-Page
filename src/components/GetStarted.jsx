@@ -9,7 +9,7 @@ export default function GetStarted() {
         <img src={bgImgM} alt="Background geometric shapes" className="lg:hidden h-[250px] w-[100vw] object-cover" />
       </div>
       <h2 className="relative z-10 font-bold text-[26px] lg:text-4xl text-white">Boost your links today</h2>
-      <button className="relative z-10 font-semibold text-lg text-white bg-primary-cyan px-12 py-3 rounded-full" type="button">Get Started</button>
+      <button className="relative z-10 font-semibold text-lg text-white bg-primary-cyan px-12 py-3 rounded-full hover:bg-cyan-200" type="button">Get Started</button>
     </div>
   )
 }
