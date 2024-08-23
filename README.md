@@ -49,9 +49,9 @@ Users should be able to:
 - [Tailwind CSS](https://tailwindcss.com/) - For styles
 
 ### What I learned
-This project posed a couple different, unexpected challenges. First, Clean URI API does not respond to the browser "preflight" request that checks if the server will allow API requests before they are made. The browser sends a HTTP OPTIONS request, but the API only allows POST requests. Consequently, the preflight request fails and returns a cross-origin resource sharing (CORS) error, which is a browser security feature that prevents API calls from being made to a site from a different domain (unless the host site adds a header that allows other URLs).
+This project posed a couple different, unexpected challenges. First, Clean URI API does not respond to the browser "preflight" request that checks if the server will allow cross-domain API requests before they are made. The browser sends a HTTP OPTIONS request, but the API only allows POST requests. Consequently, the preflight request fails and returns a cross-origin resource sharing (CORS) error, which is a browser security feature that prevents API calls from being made to a site from a different domain (unless the host site adds a header that allows other URLs).
 
-Since the domain of both my locally-hosted and deployed React app differed from the Clean URI API site, I realized I would never be able to make my requests from a purely front-end application. So I transformed my React project into a fullstack application with Next.js and used rewrites to create a proxy for communicating with the API.
+Since the domain of both my locally-hosted and deployed React app differed from the Clean URI API site, I concluded that I would not be able to make my requests from a purely front-end application. So I transformed my React project into a fullstack application with Next.js and used rewrites to create a proxy for communicating with the API.
 
 ```js
 async rewrites() {
@@ -64,7 +64,7 @@ async rewrites() {
   },
 ```
 
-This worked great locally, but I ran into another issue after prepping the project to deploy to GitHub pages. GitHub pages can only host static sites, rewrites are not supported and the deployed site would never be able to reach the Clean URI API destination.
+This worked great locally, but I ran into another issue after prepping the project to deploy to GitHub pages. GitHub pages can only host static sites, so rewrites are not supported and the deployed site would never be able to reach the Clean URI API destination.
 
 I decided to instead host my site on Vercel, which was created by the same creators of Next.js and makes deploying static or hybrid Next.js projects extremely easy. This will definitely be my go-to for any future Next.js projects.
 
