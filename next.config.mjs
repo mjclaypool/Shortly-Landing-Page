@@ -1,11 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/Shortly-Landing-Page/",
   output: 'export', // Outputs a Single-Page Application (SPA).
-  // distDir: './dist', // Changes the build output directory to `./dist/`.
-  images: {
-    unoptimized: true,
-  },
+  distDir: './dist', // Changes the build output directory to `./dist/`.
   async rewrites() {
     return [
       {
