@@ -14,7 +14,7 @@ export default function Statistics() {
 
   useMemo(() => {
     if (!fullUrl.length == 0) {
-    fetch("https://cleanuri.com/api/v1/shorten", {
+    fetch("/shorten-link", {
       method: "POST",
       body: JSON.stringify({
         url: fullUrl[fullUrl.length-1]
@@ -72,7 +72,7 @@ export default function Statistics() {
       <div className="relative flex flex-col lg:flex-row lg:text-start justify-center gap-24 lg:gap-8 min-h-[350px] my-20 lg:mb-[124px]">
         {stats.map(card => (
           <div key={card.id} className={`${card.position}`}>
-            <StatCard image={card.image} altText={card.altText} title={card.title} details={card.details} />
+            <StatCard image={card.image.src} altText={card.altText} title={card.title} details={card.details} />
           </div>
         ))}
         <hr className="absolute z-0 rotate-90 w-[1000px] left-[50%] translate-x-[-50%] lg:rotate-0 lg:top-[144px] lg:w-full border-4 border-primary-cyan" />

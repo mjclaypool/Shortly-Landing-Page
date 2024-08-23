@@ -8,7 +8,7 @@ export default function Header() {
     <header className="px-6 lg:px-40 pt-10 pb-3 lg:py-10">
       <nav className="flex justify-between font-poppins font-semibold text-neutral-grey-violet">
         <div className="flex gap-8">
-          <img src={logo} alt="Shortly Logo" className="object-contain" />
+          <img src={logo.src} alt="Shortly Logo" className="object-contain" />
           <button className="hidden lg:block hover:text-neutral-dark-violet" type="button">Features</button>
           <button className="hidden lg:block hover:text-neutral-dark-violet" type="button">Pricing</button>
           <button className="hidden lg:block hover:text-neutral-dark-violet" type="button">Resources</button>

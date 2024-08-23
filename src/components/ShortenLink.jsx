@@ -31,8 +31,8 @@ export default function ShortenLink({ shortenIt }) {
     <div className="absolute -top-[90px] lg:-top-[80px] left-[50%] translate-x-[-50%] flex w-full h-[180px] lg:h-[172px] px-6 lg:px-40">
       <div className="relative flex items-center justify-center w-full bg-primary-dark-violet px-6 lg:px-16 rounded-lg">
         <div className="absolute w-full h-full z-0">
-          <img src={bgImgD} alt="Background geometric shapes" className="w-full h-full hidden lg:block object-cover rounded-lg" />
-          <img src={bgImgM} alt="Background geometric shapes" className="w-full h-full lg:hidden object-fill rounded-lg" />
+          <img src={bgImgD.src} alt="Background geometric shapes" className="w-full h-full hidden lg:block object-cover rounded-lg" />
+          <img src={bgImgM.src} alt="Background geometric shapes" className="w-full h-full lg:hidden object-fill rounded-lg" />
         </div>
         <form className="relative flex flex-col lg:flex-row w-full lg:gap-6" onSubmit={handleSubmit}>
           <input

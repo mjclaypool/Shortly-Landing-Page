@@ -8,7 +8,7 @@ export default function Hero() {
         <p className="text-lg lg:text-[22px] font-semibold text-neutral-grey-violet lg:leading-relaxed pt-4 pb-8 lg:pt-2 lg:pb-10">Build your brand's recognition and get detailed insights on how your links are performing.</p>
         <button className="font-semibold text-lg text-white bg-primary-cyan px-12 py-3 lg:py-[14px] rounded-full hover:opacity-50" type="button">Get Started</button>
       </div>
-      <img src={heroImg} alt="Illustration of someone working at a computer" className="h-[340px] lg:h-[482px] lg:w-[610px] object-cover object-left pl-4 lg:pl-0" />
+      <img src={heroImg.src} alt="Illustration of someone working at a computer" className="h-[340px] lg:h-[482px] lg:w-[610px] object-cover object-left pl-4 lg:pl-0" />
     </div>
   )
 }
