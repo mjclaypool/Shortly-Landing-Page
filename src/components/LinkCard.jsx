@@ -10,6 +10,7 @@ export default function LinkCard({ fullUrl, shortUrl }) {
   }
 
   function handleClick() {
+    navigator.clipboard.writeText(shortUrl);
     setButtonTxt("Copied!");
     setButtonStyle("clicked");
   }
