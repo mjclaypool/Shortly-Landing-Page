@@ -8,15 +8,17 @@ export default function ShortenLink({ shortenIt }) {
   const [formColor, setFormColor] = useState("default")
   const linkUrl = useRef();
 
-  function handleSubmit(enteredUrl) {
+  function handleSubmit(event) {
     setIsInvalid(false);
     setFormColor("default");
+
+    event.preventDefault();
 
     if(linkUrl.current.value == "" || linkUrl.current.value.includes(' ') || linkUrl.current.value.includes('&') || linkUrl.current.value.includes('?') || linkUrl.current.value.includes('#')){
       setIsInvalid(true);
       setFormColor("error");
     } else {
-      shortenIt(enteredUrl);
+      shortenIt(linkUrl.current.value);
     }
   }
 
@@ -44,8 +46,8 @@ export default function ShortenLink({ shortenIt }) {
           }
           <button
             className="min-w-[170px] relative font-poppins font-bold text-lg text-white bg-primary-cyan px-8 py-3 lg:py-4 my-2 lg:my-0 rounded-md lg:rounded-lg"
-            type="button"
-            onClick={() => handleSubmit(linkUrl.current.value)}
+            type="submit"
+            onSubmit={handleSubmit}
           >
             Shorten It!
           </button>
