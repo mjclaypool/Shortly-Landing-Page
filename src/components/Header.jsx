@@ -5,7 +5,7 @@ import logo from "../../images/logo.svg";
 
 export default function Header() {
   return (
-    <header className="px-6 lg:px-40 py-10">
+    <header className="px-6 lg:px-40 pt-10 pb-3 lg:py-10">
       <nav className="flex justify-between font-poppins font-semibold text-neutral-grey-violet">
         <div className="flex gap-8">
           <img src={logo} alt="Shortly Logo" className="object-contain" />
