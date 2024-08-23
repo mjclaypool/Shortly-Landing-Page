@@ -69,7 +69,7 @@ export default function Statistics() {
       ))}
       <h2 className="font-bold text-neutral-dark-violet text-[28px] lg:text-[34px] mt-20">Advanced Statistics</h2>
       <p className="font-semibold text-neutral-grey-violet text-base lg:text-lg leading-relaxed max-w-[480px] my-5 px-4">Track how your links are performing across the web with our advanced statistics dashboard.</p>
-      <div className="relative flex flex-col lg:flex-row lg:text-start justify-center gap-24 lg:gap-8 min-h-[350px] my-20 lg:mb-[124px]">
+      <div className="relative flex flex-col xl:flex-row xl:text-start justify-center gap-24 lg:gap-8 min-h-[350px] my-20 xl:mb-[124px]">
         {stats.map(card => (
           <div key={card.id} className={`${card.position}`}>
             <StatCard image={card.image.src} altText={card.altText} title={card.title} details={card.details} />
